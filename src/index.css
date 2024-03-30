@@ -11,6 +11,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./img/lights.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 a {
