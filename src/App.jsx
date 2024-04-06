@@ -7,7 +7,7 @@ function App() {
 
   const [weatherData, setWeatherData] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const [cities, setCities] = useState(['anaheim', 'los angeles', 'new york', 'las vegas', 'miami', 'san francisco', 'chicago', 'seattle', 'boston', 'dallas', 'washinton dc', 'denver', 'san diego', 'phoenix', 'houston', 'philadelphia', 'minneapolis', 'portland', 'orlando', 'atlanta']);
+  const [cities, setCities] = useState(['anaheim', 'los angeles', 'new york', 'las vegas', 'miami', 'san francisco', 'chicago', 'seattle', 'boston', 'dallas', 'washington dc', 'denver', 'san diego', 'phoenix', 'houston', 'philadelphia', 'minneapolis', 'portland', 'orlando', 'atlanta']);
 
   const fetchData = async (city) => {
     const response = await fetch(`https://api.weatherbit.io/v2.0/current?&city=${city}&key=${API_KEY}`);
@@ -53,23 +53,8 @@ function App() {
     <div className="App">
       <h1>Welcome to my Weather App!</h1>
       <div className='app'>
-        <div className='app-child2'>
-          {weatherData ? (
-            <div className="data">
-              {weatherData.map((data, index) => (
-                <div key={index}>
-                  <h2>City: {data.data[0].city_name}</h2>
-                  <p>Temperature: {data.data[0].temp}°C</p>
-                  <p> More Details: <Link to="/detail">Click Here</Link></p>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p>Loading...</p>
-          )}
-        </div>
 
-        <div className='app-child'>
+      <div className='app-child'>
           <p>Here is the weather around some popular cities:</p>
           <p>Or you can search your own:</p>
           <input
@@ -86,6 +71,22 @@ function App() {
           <br></br>
           <br></br>
           <button onClick={clearSearch}>Clear Filters</button>
+        </div>
+        
+        <div className='app-child2'>
+          {weatherData ? (
+            <div className="data">
+              {weatherData.map((data, index) => (
+                <div key={index}>
+                  <h2>City: {data.data[0].city_name}</h2>
+                  <p>Temperature: {data.data[0].temp}°C</p>
+                  <p> More Details: <Link to="/detail">Click Here</Link></p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p>Loading...</p>
+          )}
         </div>
 
       </div>
