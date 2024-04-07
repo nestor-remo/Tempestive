@@ -1,8 +1,7 @@
-# Web Development Project 6 - *Name of App Here*
-
+# Web Development Project 6 - Weather App
 Submitted by: Nestor Reategui
 
-This web app: Fetches data from WeatherBit API to display a couple of attributes from major cities! You can also look up whatever city you want and filter them by temperature.
+This web app: Fetches data from WeatherBit API to display a couple of attributes from major cities! You can also look up whatever city you want and filter them by temperature. You can then select a particular city for even more details.
 
 Time spent: 4 hours spent in total
 
@@ -10,9 +9,9 @@ Time spent: 4 hours spent in total
 
 The following **required** functionality is completed:
 
-- [X] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
+- [] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
 - [X] **Clicking on an item in the list view displays more details about it**
-- [ ] **Clicking on an item has a direct, unique link to that item's detail view page**
+- [X] **Clicking on an item has a direct, unique link to that item's detail view page**
 
 
 The following **optional** features are implemented:
