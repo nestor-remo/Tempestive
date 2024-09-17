@@ -1,4 +1,4 @@
-# Web Development Project 6 - Weather App
+# Web Development Project 6 - Tempestive
 Submitted by: Nestor Reategui
 
 This web app: Fetches data from WeatherBit API to display a couple of attributes from major cities! You can also look up whatever city you want and filter them by temperature. You can then select a particular city for even more details.
