@@ -2,13 +2,12 @@ import { useEffect, useState } from 'react'
 import './App.css'
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 import { Link } from 'react-router-dom';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 function App() {
 
   const [weatherData, setWeatherData] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const [cities, setCities] = useState(['anaheim', 'los angeles', 'new york', 'las vegas', 'miami', 'san francisco', 'chicago', 'seattle', 'boston', 'dallas', 'washington dc', 'denver', 'san diego', 'phoenix', 'houston', 'philadelphia', 'minneapolis', 'portland', 'orlando', 'atlanta']);
+  const [cities, setCities] = useState(['anaheim', 'los angeles']);
 
   const fetchData = async (city) => {
     const response = await fetch(`https://api.weatherbit.io/v2.0/current?&city=${city}&key=${API_KEY}`);
@@ -91,26 +90,6 @@ function App() {
         </div>
 
       </div>
-      <ResponsiveContainer width="100%" height="100%">
-        <LineChart
-          width={500}
-          height={300}
-          data={weatherData.map((data) => ({ city: data.data[0].city_name, temperature: data.data[0].temp }))}
-          margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="city" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey="temperature" stroke="#8884d8" activeDot={{ r: 8 }} />
-        </LineChart>
-      </ResponsiveContainer>
     </div>
   );
 }
