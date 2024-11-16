@@ -80,8 +80,8 @@ function App() {
                 <div key={index}>
                   <h2>City: {data.data[0].city_name}</h2>
                   <p>Temperature: {data.data[0].temp}°C</p>
-                  <p> More Details: <Link to="/detail">Click Here</Link></p>
-                </div>
+                  <p> More Details: <Link to={`/detail/${data.data[0].city_name}`}>Click Here</Link></p>
+                </div>  
               ))}
             </div>
           ) : (
