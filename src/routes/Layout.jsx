@@ -1,11 +1,12 @@
 import { Outlet, Link } from 'react-router-dom';
+import '../App.css';
 
 const Layout = () => {
     return (
         <div>
             <nav>
                 <ul>
-                    <li className='home-link' key="home-button" style={list-style: "none"}>
+                    <li className='home-link' key="home-button">
                         <Link style={{color: "white"}} to="/">Home</Link>
                     </li>
                 </ul>
