@@ -51,7 +51,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Welcome to my Weather App!</h1>
+      <h1>Welcome to Tempestive!</h1>
       <div className='app'>
 
       <div className='app-child'>
